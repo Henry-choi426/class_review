@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- input form tag or 한 행 입력 text field  
+        id 속성은 js상에서 주로 사용
+        name 속성은 서버단에서 주로 사용. 크롤링 api 상에서 사용하기도 함-->
+
+    <input type="text" name="in1" id="in1">
+    <button onclick="data_check()" id='btn' name='btn'>입력</button>
+    <br><hr><br>
+    <div id='view_data'></div>
+
+    <script>
+        function data_check(){
+            if (document.getElementById("in1").value == 'encore'){
+                document.getElementById("view_data").innerText = "안녕하세요"
+            }
+            else{
+                document.getElementById("view_data").innerText = "어디서 오셨어요~"
+            }
+        }
+    </script>
+</body>
+</html>
